@@ -1,6 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
-import { uglify } from "rollup-plugin-uglify";
 import postcss from "rollup-plugin-postcss";
 import easyImport from "postcss-easy-import";
 import nested from "postcss-nested";
@@ -19,7 +18,6 @@ export default {
     }),
     commonjs(),
     resolve(),
-    uglify(),
     copy({
       targets: [{ src: "assets/**/*", dest: "./site/assets" }]
     })
